@@ -11,12 +11,19 @@ public class Person {
     Sex sex;
     String emailAddress;
 
+    public Person(String name, Sex sex, String emailAddress) {
+        this.name = name;
+        this.sex = sex;
+        this.emailAddress = emailAddress;
+    }
+
     public int getAge() {
         return 0;
     }
 
-    public void printPerson() {
+    public String printPerson() {
         System.out.println(toString());
+        return toString();
     }
 
     @Override

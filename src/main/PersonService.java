@@ -7,12 +7,14 @@ public class PersonService {
         this.people = people;
     }
 
-    public static void printPersons(List<Person> roster, CheckPerson tester) {
+    public static String printPersons(List<Person> roster, CheckPerson tester) {
+        StringBuilder sb = new StringBuilder();
         for (Person p : roster) {
             if (tester.test(p)) {
-                p.printPerson();
+                sb.append(p.printPerson()).append("\n");
             }
         }
+        return sb.toString();
     }
 
 }
